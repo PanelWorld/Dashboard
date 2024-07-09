@@ -1,10 +1,38 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
-    </body>
+<html>
+  <head>
+    <title>My Site</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <style>{{{payload.style}}}</style>
+  </head>
+  
+
+    <h2>Using CSS to style an HTML form with AJAX POST and Node-RED</h2>
+    <h4><a href="http://www.internetoflego.com">Internet of LEGO</a></h4>
+
+<div>
+  <form method="post" action="/{{url}}" ajax="true">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="uk">United Kingdom</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div>
+    <span id="result"></span>
+</div>
+
+</body>
 </html>
+<script>{{{payload.script}}}</script>
